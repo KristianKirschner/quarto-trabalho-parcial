@@ -13,7 +13,4 @@ public class Categoria extends PanacheEntityBase {
 
     public String descricao;
 
-    @ManyToOne
-    @JoinColumn(name = "categoria_pai_id")
-    public Categoria categoriaPai;
 }
