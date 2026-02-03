@@ -1,0 +1,19 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: ecommerce_mysql
+    environment:
+      MYSQL_DATABASE: ecommerce
+      MYSQL_USER: ecommerceAdmin
+      MYSQL_PASSWORD: change-me
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    command: ["--default-authentication-plugin=mysql_native_password"]
+
+# Uso:
+# docker compose up -d
+# Depois exporte as env vars e rode a app:
+# export DB_URL="jdbc:mysql://localhost:3306/ecommerce"
+# export DB_USERNAME="ecommerceAdmin"
+# export DB_PASSWORD="change-me"
